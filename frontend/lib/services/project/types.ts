@@ -1,4 +1,4 @@
-import {TrustLevel} from '../core/types';
+import { TrustLevel } from "../core/types";
 
 /**
  * 项目分发类型
@@ -183,6 +183,10 @@ export interface GetProjectResponseData extends Project {
   tags: string[] | null;
   /** 可领取数量 */
   available_items_count: number;
+  /** 是否已经领取 */
+  has_received: boolean;
+  /** 领取内容 */
+  received_content: string | null;
 }
 
 /**

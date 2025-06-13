@@ -569,6 +569,9 @@ const docTemplate = `{
                 "end_time": {
                     "type": "string"
                 },
+                "has_received": {
+                    "type": "boolean"
+                },
                 "id": {
                     "type": "string"
                 },
@@ -579,6 +582,9 @@ const docTemplate = `{
                     "$ref": "#/definitions/oauth.TrustLevel"
                 },
                 "name": {
+                    "type": "string"
+                },
+                "received_content": {
                     "type": "string"
                 },
                 "risk_level": {
