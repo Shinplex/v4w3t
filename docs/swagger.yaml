@@ -142,6 +142,8 @@ definitions:
         $ref: '#/definitions/project.DistributionType'
       end_time:
         type: string
+      has_received:
+        type: boolean
       id:
         type: string
       is_completed:
@@ -149,6 +151,8 @@ definitions:
       minimum_trust_level:
         $ref: '#/definitions/oauth.TrustLevel'
       name:
+        type: string
+      received_content:
         type: string
       risk_level:
         type: integer

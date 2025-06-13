@@ -247,6 +247,8 @@ export function ReceiveMain() {
 
       if (result.success && result.data) {
         setProject(result.data);
+        setHasReceived(result.data.has_received);
+        setReceivedContent(result.data.received_content);
       } else {
         setError(result.error || '获取项目详情失败');
       }
@@ -273,10 +275,7 @@ export function ReceiveMain() {
           ...prev,
           available_items_count: prev.available_items_count - 1,
         } : null);
-
-        const content = '您的兑换码';
-        setHasReceived(true);
-        setReceivedContent(content);
+        await fetchProject();
         toast.success('领取成功！');
       } else {
         toast.error(result.error || '领取失败');
